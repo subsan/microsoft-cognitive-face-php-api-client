@@ -12,14 +12,14 @@ use Subsan\MicrosoftCognitiveFace\Model\PersonGroup;
 
 class Client
 {
-    private const BASE_URL = 'https://northeurope.api.cognitive.microsoft.com/face/v1.0/';
+    private const BASE_URL = 'https://%s.api.cognitive.microsoft.com/face/v1.0/';
 
     private $guzzleClient;
 
-    public function __construct(string $key)
+    public function __construct(string $key, string $region = 'northeurope')
     {
         $this->guzzleClient = new \GuzzleHttp\Client([
-            'base_uri' => self::BASE_URL,
+            'base_uri' => sprintf(self::BASE_URL, $region),
             'headers'  => [
                 'Ocp-Apim-Subscription-Key' => $key,
                 'Content-Type'              => 'application/json',

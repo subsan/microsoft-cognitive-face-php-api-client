@@ -46,7 +46,7 @@ require_once '/path/to/microsoft-cognitive-face-php-api-client/vendor/autoload.p
 // include your composer dependencies
 require_once 'vendor/autoload.php';
 
-$client = new \Subsan\MicrosoftCognitiveFace\Client('YOUR_APP_KEY');
+$client = new \Subsan\MicrosoftCognitiveFace\Client('YOUR_APP_KEY', 'YOUR_REGION');
 $faces  = $client->face()->detectFacesFromImg('URL_IMAGE_WITH_FACES');
 
 var_dump($faces);
@@ -57,7 +57,7 @@ var_dump($faces);
 ```php
 require_once 'vendor/autoload.php';
 
-$client = new \Subsan\MicrosoftCognitiveFace\Client('YOUR_APP_KEY');
+$client = new \Subsan\MicrosoftCognitiveFace\Client('YOUR_APP_KEY', 'YOUR_REGION');
 
 // create new person group
 $newPersonGroupId = uniqid();
@@ -96,7 +96,7 @@ foreach ($faces as $face) {
 ```php
 require_once 'vendor/autoload.php';
 
-$client = new \Subsan\MicrosoftCognitiveFace\Client('YOUR_APP_KEY');
+$client = new \Subsan\MicrosoftCognitiveFace\Client('YOUR_APP_KEY', 'YOUR_REGION');
 
 // in previous example $newPersonGroupId
 $personGroupId = 'ID_OF_CREATED_PERSON_GROUP';
@@ -112,7 +112,7 @@ var_dump($client->personGroup()->getTrainStatus($personGroupId));
 ```php
 require_once 'vendor/autoload.php';
 
-$client = new \Subsan\MicrosoftCognitiveFace\Client('YOUR_APP_KEY');
+$client = new \Subsan\MicrosoftCognitiveFace\Client('YOUR_APP_KEY', 'YOUR_REGION');
 
 // in previous example $newPersonGroupId
 $personGroupId = 'ID_OF_CREATED_PERSON_GROUP';
