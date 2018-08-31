@@ -1,0 +1,26 @@
+{
+    "name": "subsan/microsoft-cognitive-face-php-api-client",
+    "homepage": "https://github.com/subsan/microsoft-cognitive-face-php-api-client",
+    "description": "PHP client for Face module in Microsoft Cognitive Services",
+    "keywords": ["microsoft", "cognitive", "face", "api"],
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Subsan",
+            "homepage": "https://github.com/subsan"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/subsan/microsoft-cognitive-face-php-api-client/issues"
+    },
+    "autoload": {
+        "psr-4": {
+            "Subsan\\MicrosoftCognitiveFace\\": "src/"
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "~6.0",
+        "php": ">=7.1"
+    }
+}
