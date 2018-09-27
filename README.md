@@ -18,7 +18,7 @@ composer installed.
 Once composer is installed, execute the following command in your project root to install this library:
 
 ```sh
-composer require subsan/subsan/microsoft-cognitive-face-php-api-client:"^1.0"
+composer require subsan/microsoft-cognitive-face-php-api-client
 ```
 
 Finally, be sure to include the autoloader:
